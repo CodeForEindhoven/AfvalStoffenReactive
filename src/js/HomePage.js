@@ -6,7 +6,8 @@ var HomePage = {
 		return m("div",[
 			m.component(MenuBar),
 			m("div",{class: "page"},[
-				m.component(Form)
+				m.component(Form),
+				m.component(Compare)
 			])
 		]);
 	}

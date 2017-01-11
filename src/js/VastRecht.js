@@ -1,7 +1,9 @@
 var VastRecht = (function(){
 	var style = {
 		parent: s.cl({
-			"margin-bottom": "60px"
+			"margin-bottom": "30px",
+			"padding-bottom": "30px",
+			"border-bottom": "1px solid #eeeeee",
 		}),
 		title: s.cl({
 			"margin-bottom": "10px",
@@ -28,7 +30,10 @@ var VastRecht = (function(){
 		},
 		view: function(ctrl, options){
 			return m("div",{class: style.parent},[
-				m("div", {class: style.title}, "Vastrecht"),
+				m.component(SubBlockTitle, {
+					title: "Vastrecht",
+					subtitle: "Vast bedrag over de hele pot"
+				}),
 				m("div",[
 					m("div", {class: style.label}, "Houd Eersel Schoon"),
 					m("div", {class: style.price}, "€"+(10.48).toFixed(2)),
