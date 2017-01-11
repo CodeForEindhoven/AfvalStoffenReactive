@@ -6,7 +6,8 @@ var Form = (function(){
 		"box-shadow": "1px 1px 5px #AAAAAA",
 		"user-select": "none",
 		"float": "left",
-		"width": "100%"
+		"width": "100%",
+		"margin-bottom": "30px",
 	});
 
 	return {
