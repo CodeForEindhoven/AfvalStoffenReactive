@@ -30,12 +30,11 @@ var Form = (function(){
 					{
 						title: "Restafval, het huishoudelijke afval voor zover dat niet wordt gerekend tot het gft-afval",
 						amount: 5,
-						icon: "/img/black_container2.svg",
 						choices: [
-							{label: "140 Liter - €8.60", price:  8.60},
-							{label: "80 Liter - €4.91", price: 4.91},
-							{label: "40 Liter - €2.25", price: 2.25},
-							{label: "60 Liter - €3.43", price: 3.43},
+							{label: "140 Liter - €8.60", price:  8.60, icon: "/img/black_container2.svg"},
+							{label: "80 Liter - €4.91", price: 4.91, icon: "/img/black_container3.svg"},
+							{label: "40 Liter - €2.25", price: 2.25, icon: "/img/black_container4.svg"},
+							{label: "60 Liter - €3.43", price: 3.43, icon: "/img/black_bag2.svg"},
 						],
 						onchange: ctrl.grijs
 					}),
@@ -43,11 +42,10 @@ var Form = (function(){
 					{
 						title: "Gft-afval, groente-, fruit- en tuinafval",
 						amount: 6,
-						icon: "/img/green_container2.svg",
 						choices: [
-							{label: "140 Liter - €1.50", price: 1.50},
-							{label: "80 Liter - €1.50", price: 1.50},
-							{label: "25 Liter - €1.50", price: 1.50},
+							{label: "140 Liter - €1.50", price: 1.50, icon: "/img/green_container2.svg"},
+							{label: "80 Liter - €1.50", price: 1.50, icon: "/img/green_container3.svg"},
+							{label: "25 Liter - €1.50", price: 1.50, icon: "/img/green_container4.svg"},
 						],
 						onchange: ctrl.groen
 					}),
@@ -55,9 +53,8 @@ var Form = (function(){
 					{
 						title: "Pmd-afval, plastic-, metalenverpakkingen en drankkartons",
 						amount: 59,
-						icon: "/img/yellow_bag2.svg",
 						choices: [
-							{label: "60 Liter - €0.00", price: 0}
+							{label: "60 Liter - €0.00", price: 0, icon: "/img/yellow_bag2.svg",}
 						],
 						onchange: ctrl.pmd
 					}),

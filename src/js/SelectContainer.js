@@ -39,7 +39,7 @@ var SelectContainer = (function(){
 
 	return {
 		controller: function(options){
-			var value = options.choices[0].label;
+			var value = options.choices[0];
 			var show = false;
 			return {
 				show: function(){return show;},
@@ -49,7 +49,7 @@ var SelectContainer = (function(){
 				},
 				gen_onselect: function(v){
 					return function(){
-						value = options.choices[v].label;
+						value = options.choices[v];
 						options.onchange(v);
 						show = false;
 					};
@@ -60,8 +60,8 @@ var SelectContainer = (function(){
 			console.log(ctrl.show());
 			return m("div",{class: style.parent},[
 				m("div", {class: style.box, onclick: ctrl.onclick},[
-					m("img",{class: style.icon, src: options.icon}),
-					m("span",{},ctrl.value()),
+					m("img",{class: style.icon, src: ctrl.value().icon}),
+					m("span",{},ctrl.value().label),
 					m("span",{class: style.right},options.choices.length>1?"▼":"")
 				]),
 				(function(){
@@ -69,7 +69,7 @@ var SelectContainer = (function(){
 						return m("div", {class: style.options},
 							options.choices.map(function(choice, count){
 								return m("div", {class: style.option, onclick: ctrl.gen_onselect(count)},[
-									m("img",{class: style.icon, src: options.icon}),
+									m("img",{class: style.icon, src: choice.icon}),
 									m("span",{},choice.label)
 								]);
 							})
