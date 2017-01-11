@@ -5,7 +5,7 @@ var VastRecht = (function(){
 		}),
 		title: s.cl({
 			"margin-bottom": "10px",
-			"border-bottom": "1px solid #eeeeee"
+			"border-bottom": "1px solid #aaaaaa"
 		}),
 		label: s.cl({
 			"float": "left",

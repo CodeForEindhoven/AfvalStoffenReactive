@@ -45,7 +45,7 @@ var SelectContainer = (function(){
 				show: function(){return show;},
 				value: function(){return value;},
 				onclick: function(){
-					show = !show;
+					if(options.choices.length>1) show = !show;
 				},
 				gen_onselect: function(v){
 					return function(){

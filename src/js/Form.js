@@ -35,6 +35,7 @@ var Form = (function(){
 							{label: "140 Liter - €8.60", price:  8.60},
 							{label: "80 Liter - €4.91", price: 4.91},
 							{label: "40 Liter - €2.25", price: 2.25},
+							{label: "60 Liter - €3.43", price: 3.43},
 						],
 						onchange: ctrl.grijs
 					}),
