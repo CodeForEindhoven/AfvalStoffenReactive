@@ -28,7 +28,7 @@ var Form = (function(){
 			return m("div",{class: style},[
 				m.component(CalculatorModule,
 					{
-						title: "Grijze Container",
+						title: "Restafval, het huishoudelijke afval voor zover dat niet wordt gerekend tot het gft-afval",
 						amount: 5,
 						icon: "/img/black_container2.svg",
 						choices: [
@@ -40,7 +40,7 @@ var Form = (function(){
 					}),
 				m.component(CalculatorModule,
 					{
-						title: "Groene Container",
+						title: "Gft-afval, groente-, fruit- en tuinafval",
 						amount: 6,
 						icon: "/img/green_container2.svg",
 						choices: [
@@ -52,7 +52,7 @@ var Form = (function(){
 					}),
 				m.component(CalculatorModule,
 					{
-						title: "PMD Zakken",
+						title: "Pmd-afval, plastic-, metalenverpakkingen en drankkartons",
 						amount: 59,
 						icon: "/img/yellow_bag2.svg",
 						choices: [
