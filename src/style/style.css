@@ -1,0 +1,28 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Nunito Sans', sans-serif;
+	background-color: #dddddd;
+}
+
+.page {
+	width: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+.hover:hover{
+	background-color: #eeeeee;
+}
+
+@media only screen and (max-width: 680px) {
+	.page {
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-left: 0px;
+		margin-right: 0px;
+		box-sizing: border-box;
+	}
+}
