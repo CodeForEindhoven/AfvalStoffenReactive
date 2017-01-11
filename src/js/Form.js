@@ -28,7 +28,8 @@ var Form = (function(){
 			return m("div",{class: style},[
 				m.component(CalculatorModule,
 					{
-						title: "Restafval, het huishoudelijke afval voor zover dat niet wordt gerekend tot het gft-afval",
+						title: "Restafval",
+						subtitle: "Het huishoudelijke afval voor zover dat niet wordt gerekend tot het gft-afval",
 						amount: 5,
 						choices: [
 							{label: "140 Liter - €8.60", price:  8.60, icon: "/img/black_container2.svg"},
@@ -40,7 +41,8 @@ var Form = (function(){
 					}),
 				m.component(CalculatorModule,
 					{
-						title: "Gft-afval, groente-, fruit- en tuinafval",
+						title: "Gft-afval",
+						subtitle: "Groente-, fruit- en tuinafval",
 						amount: 6,
 						choices: [
 							{label: "140 Liter - €1.50", price: 1.50, icon: "/img/green_container2.svg"},
@@ -51,7 +53,8 @@ var Form = (function(){
 					}),
 				m.component(CalculatorModule,
 					{
-						title: "Pmd-afval, plastic-, metalenverpakkingen en drankkartons",
+						title: "Pmd-afval",
+						subtitle: "plastic-, metalenverpakkingen en drankkartons",
 						amount: 59,
 						choices: [
 							{label: "60 Liter - €0.00", price: 0, icon: "/img/yellow_bag2.svg",}

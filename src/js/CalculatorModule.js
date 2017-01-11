@@ -4,8 +4,14 @@ var CalculatorModule = (function(){
 			"margin-bottom": "60px"
 		}),
 		title: s.cl({
+			"font-size": "12pt",
+			"font-weight": "bold",
+		}),
+		subtitle: s.cl({
+			"font-size": "10pt",
 			"margin-bottom": "10px",
-			"border-bottom": "1px solid #eeeeee"
+			"border-bottom": "1px solid #eeeeee",
+			"color": "#666666",
 		}),
 		price: s.cl({
 			"margin-top": "90px",
@@ -38,6 +44,7 @@ var CalculatorModule = (function(){
 		view: function(ctrl, options){
 			return m("div",{class: style.parent},[
 				m("div", {class: style.title}, options.title),
+				m("div", {class: style.subtitle}, options.subtitle),
 				m.component(NumberSpinner, {
 					value: options.amount,
 					onchange: ctrl.set_amount
