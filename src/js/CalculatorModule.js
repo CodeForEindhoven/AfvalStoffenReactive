@@ -20,11 +20,19 @@ var CalculatorModule = (function(){
 		controller: function(options){
 			var amount = options.amount;
 			var unitprice = options.choices[0].price;
-
+			options.onchange(amount*unitprice);
 			return {
-				set_unitprice: function(a){unitprice = options.choices[a].price;},
-				set_amount: function(a){amount=a;},
-				price: function(){return amount*unitprice;}
+				set_unitprice: function(a){
+					unitprice = options.choices[a].price;
+					options.onchange(amount*unitprice);
+				},
+				set_amount: function(a){
+					amount=a;
+					options.onchange(amount*unitprice);
+				},
+				price: function(){
+					return amount*unitprice;
+				}
 			};
 		},
 		view: function(ctrl, options){

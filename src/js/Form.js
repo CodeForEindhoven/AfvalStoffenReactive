@@ -11,9 +11,17 @@ var Form = (function(){
 
 	return {
 		controller: function(){
-
+			var grijs = 25.70;
+			var groen = 9.00;
+			var pmd = 0;
+			var vastrecht = 69.48;
 			return {
-
+				grijs: function(a){grijs=a;},
+				groen: function(a){groen=a;},
+				pmd: function(a){pmd=a;},
+				total: function(){
+					return grijs + groen + pmd + vastrecht;
+				}
 			};
 		},
 		view: function(ctrl){
@@ -24,10 +32,11 @@ var Form = (function(){
 						amount: 5,
 						icon: "/img/black_container2.svg",
 						choices: [
-							{label: "40 Liter", price: 5.14},
-							{label: "80 Liter", price: 6.14},
-							{label: "120 Liter", price: 7.14},
-						]
+							{label: "140 Liter - €8.60", price:  8.60},
+							{label: "80 Liter - €4.91", price: 4.91},
+							{label: "40 Liter - €2.25", price: 2.25},
+						],
+						onchange: ctrl.grijs
 					}),
 				m.component(CalculatorModule,
 					{
@@ -35,10 +44,11 @@ var Form = (function(){
 						amount: 6,
 						icon: "/img/green_container2.svg",
 						choices: [
-							{label: "10 Liter", price: 1.50},
-							{label: "20 Liter", price: 1.50},
-							{label: "120 Liter", price: 1.50},
-						]
+							{label: "140 Liter - €1.50", price: 1.50},
+							{label: "80 Liter - €1.50", price: 1.50},
+							{label: "25 Liter - €1.50", price: 1.50},
+						],
+						onchange: ctrl.groen
 					}),
 				m.component(CalculatorModule,
 					{
@@ -46,11 +56,14 @@ var Form = (function(){
 						amount: 59,
 						icon: "/img/yellow_bag2.svg",
 						choices: [
-							{label: "40 Liter", price: 0}
-						]
+							{label: "60 Liter - €0.00", price: 0}
+						],
+						onchange: ctrl.pmd
 					}),
 				m.component(VastRecht),
-				m.component(TotalPrice)
+				m.component(TotalPrice, {
+					values: ctrl.total()
+				})
 			]);
 		}
 	};
