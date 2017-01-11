@@ -1,0 +1,60 @@
+[{
+    "gemeente": "Eersel",
+    "year": "2017",
+    "tarifs": [{
+        "type": "rest",
+        "price": 25.70,
+        "choices": [{
+            "volume": 140,
+            "icon": "/img/black_container2.svg",
+            "label": "140 Liter - €8.60",
+            "price": 8.60
+        }, {
+            "volume": 80,
+            "icon": "/img/black_container3.svg",
+            "label": "80 Liter - €4.91",
+            "price": 4.91
+        }, {
+            "volume": 60,
+            "label": "60 Liter - €3.43",
+            "price": 3.43,
+            "icon": "/img/black_bag2.svg"
+        }, {
+            "volume": 40,
+            "icon": "/img/black_container4.svg",
+            "label": "40 Liter - €2.25",
+            "price": 2.25
+        }]
+    }, {
+        "type": "gft",
+        "price": 9.00,
+        "choices": [{
+            "volume": 140,
+            "label": "140 Liter - €1.50",
+            "price": 1.50,
+            "icon": "/img/green_container2.svg"
+        }, {
+            "volume": 80,
+            "label": "80 Liter - €1.50",
+            "price": 1.50,
+            "icon": "/img/green_container3.svg"
+        }, {
+            "volume": 25,
+            "label": "25 Liter - €1.50",
+            "price": 1.50,
+            "icon": "/img/green_container4.svg"
+        }]
+    }, {
+        "type": "pmd",
+        "price": 0,
+        "choices": [{
+            "volume": 60,
+            "label": "60 Liter - €0.00",
+            "price": 0,
+            "icon": "/img/yellow_bag2.svg"
+        }]
+    }, {
+        "type": "tax",
+        "price": 69.48
+    }]
+}]
