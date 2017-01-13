@@ -16,13 +16,16 @@ body {
 	background-color: #eeeeee;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 360px) {
+	body {
+		width: 360px;
+	}
+
 	.page {
-		width: 100%;
-		padding-left: 20px;
-		padding-right: 20px;
-		margin-left: 0px;
-		margin-right: 0px;
+		width: 360px;
+		/*padding-left: 20px;
+		padding-right: 20px;*/
+
 		box-sizing: border-box;
 	}
 }

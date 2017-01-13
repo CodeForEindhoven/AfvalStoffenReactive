@@ -11,18 +11,16 @@ var Form = (function(){
 	});
 
 	return {
-		controller: function(){
-			var grijs = 0;
-			var groen = 0;
-			var pmd = 0;
-			var vastrecht = 69.48;
+		controller: function(values){
+
 			return {
-				grijs: function(a){grijs=a;},
-				groen: function(a){groen=a;},
-				pmd: function(a){pmd=a;},
+				grijs: values.grijs,
+				groen: values.groen,
+				pmd: values.pmd,
+				vastrecht: values.vastrecht,
 				total: function(){
 					console.log("update total");
-					return grijs + groen + pmd + vastrecht;
+					return values.grijs() + values.groen() + values.pmd() + values.vastrecht();
 				}
 			};
 		},
