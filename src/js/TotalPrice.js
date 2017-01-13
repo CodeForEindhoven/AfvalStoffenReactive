@@ -31,7 +31,7 @@ var TotalPrice = (function(){
 			return m("div",{class: style.parent},[
 				m("div", {class: style.title}, "Totaal"),
 				m("div", {class: style.topline}, " "),
-				m("div", {class: style.price}, "€"+(options.values).toFixed(2))
+				m("div", {class: style.price}, "€"+(options.values()).toFixed(2))
 			]);
 		}
 	};

@@ -57,7 +57,6 @@ var SelectContainer = (function(){
 			};
 		},
 		view: function(ctrl, options){
-			console.log(ctrl.show());
 			return m("div",{class: style.parent},[
 				m("div", {class: style.box, onclick: ctrl.onclick},[
 					m("img",{class: style.icon, src: ctrl.value().icon}),

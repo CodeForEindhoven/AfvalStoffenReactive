@@ -12,8 +12,8 @@ var Form = (function(){
 
 	return {
 		controller: function(){
-			var grijs = 25.70;
-			var groen = 9.00;
+			var grijs = 0;
+			var groen = 0;
 			var pmd = 0;
 			var vastrecht = 69.48;
 			return {
@@ -21,6 +21,7 @@ var Form = (function(){
 				groen: function(a){groen=a;},
 				pmd: function(a){pmd=a;},
 				total: function(){
+					console.log("update total");
 					return grijs + groen + pmd + vastrecht;
 				}
 			};
@@ -64,7 +65,7 @@ var Form = (function(){
 					}),
 				m.component(VastRecht),
 				m.component(TotalPrice, {
-					values: ctrl.total()
+					values: ctrl.total
 				})
 			]);
 		}

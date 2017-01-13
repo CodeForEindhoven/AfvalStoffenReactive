@@ -27,22 +27,32 @@ var CalculatorModule = (function(){
 		controller: function(options){
 			var amount = options.amount;
 			var unitprice = options.choices[0].price;
-			options.onchange(amount*unitprice);
+			var price = 0;
+
+			function updateprice(){
+				console.log("updateprice");
+				price = amount*unitprice;
+				options.onchange(price);
+			}
+
+			updateprice();
+
 			return {
 				set_unitprice: function(a){
 					unitprice = options.choices[a].price;
-					options.onchange(amount*unitprice);
+					updateprice();
 				},
 				set_amount: function(a){
 					amount=a;
-					options.onchange(amount*unitprice);
+					updateprice();
 				},
 				price: function(){
-					return amount*unitprice;
+					return price;
 				}
 			};
 		},
 		view: function(ctrl, options){
+			//ctrl.updateprice();
 			return m("div",{class: style.parent},[
 				m.component(SubBlockTitle, options),
 				m.component(NumberSpinner, {
