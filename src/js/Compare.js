@@ -16,12 +16,25 @@ var Compare = (function(){
 			"padding-left": "100px",
 			"margin-top": "30px",
 
+		}),
+		label: s.cl({
+			"margin-top": "30px",
+			"float": "left",
+			"height": "20px"
+		}),
+		price: s.cl({
+			"font-size": "20pt",
+			"width": "100%",
+			"text-align": "right"
 		})
 	};
 
 	return {
-		controller: function(){
+		controller: function(values){
 			return {
+				totaldif: function(){
+					return (values.vastrecht()+values.grijs()+values.groen()-103.03);
+				}
 			};
 		},
 		view: function(ctrl, values){
@@ -36,19 +49,26 @@ var Compare = (function(){
 						title: "Gemiddelde",
 						blocks: [
 							{color: "#4081c2", value:69.48*factor, label: "€69.48", title: "Vastrecht"},
-							{color: "#949594", value:17.15*factor, label: "€17.15", title: "Grijs"},
-							{color: "#4b9b4a", value:17.15*factor, label: "€17.15", title: "GFT"}
+							{color: "#949594", value:24.55*factor, label: "€24.55", title: "Grijs"},
+							{color: "#4b9b4a", value:9.00*factor, label: "€9.00", title: "GFT"},
+							//{color: "#FFC41D", value:0*factor, label: "€0", title: "PMD"}
 						]
 					}),
 					m.component(BarGraph, {
 						title: "Jij",
 						blocks: [
-							{color: "#4081c2", value:values.vastrecht()*factor, label: "€"+values.vastrecht()},
-							{color: "#949594", value:values.grijs()*factor, label: "€"+values.grijs()},
-							{color: "#4b9b4a", value:values.groen()*factor, label: "€"+values.groen()}
+							{color: "#4081c2", value:values.vastrecht()*factor, label: "€"+values.vastrecht().toFixed(2)},
+							{color: "#949594", value:values.grijs()*factor, label: "€"+values.grijs().toFixed(2)},
+							{color: "#4b9b4a", value:values.groen()*factor, label: "€"+values.groen().toFixed(2)}
 						]
 					})
-				])
+				]),
+				m("div",{class: style.label},[
+					m("span", {}, "U betaalt "),
+					m("span", {class: style.price}, "€"+Math.abs(ctrl.totaldif()).toFixed(2)),
+					m("span", {}, ((ctrl.totaldif()<0)?" minder ":" meer ")),
+					m("span", {}, " dan de gemiddelde inwoner."),
+				]),
 			]);
 		}
 	};

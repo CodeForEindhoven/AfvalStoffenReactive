@@ -32,13 +32,17 @@ var BarGraph = (function(){
 			return m("div",{class: style.main},[
 				m("div",{},options.title),
 				options.blocks.map(function(b){
-					return m("div",{
-						class: style.block,
-						style: "height:"+b.value+"px; background-color: "+b.color+";"
-					},[
-						m("span",{},b.label),
-						m("span",{class: style.title}, b.title)
-					]);
+					if(b.value>0){
+						return m("div",{
+							class: style.block,
+							style: "height:"+b.value+"px; background-color: "+b.color+";"
+						},[
+							m("span",{},b.label),
+							m("span",{class: style.title}, b.title)
+						]);
+					} else {
+						return m("div");
+					}
 				})
 			]);
 		}

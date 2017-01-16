@@ -2,7 +2,8 @@ var NumberSpinner = (function(){
 	var style = {
 		parent: s.cl({
 			"float": "left",
-			"position": "relative"
+			"position": "relative",
+			"user-select": "none",
 		}),
 		box: s.cl({
 			"width": "30px",

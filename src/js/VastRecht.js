@@ -35,21 +35,25 @@ var VastRecht = (function(){
 					subtitle: "Vast bedrag over de hele pot"
 				}),
 				m("div",[
-					m("div", {class: style.label}, "Houd Eersel Schoon"),
-					m("div", {class: style.price}, "€"+(10.48).toFixed(2)),
+					//m("div", {class: style.label}, "Houd Eersel Schoon"),
+					m("div", {class: style.price}, "€"+(69.48).toFixed(2)),
 				]),
-				m("div",[
-					m("div", {class: style.label}, "Voor Anderen"),
-					m("div", {class: style.price}, "€"+(5.48).toFixed(2)),
-				]),
-				m("div",[
-					m("div", {class: style.label}, "Mijn Afval"),
-					m("div", {class: style.price}, "€"+(1.48).toFixed(2)),
-				]),
-				m("div",[
-					m("div", {class: style.label}, "Milieustraat"),
-					m("div", {class: style.price}, "€"+(20.48).toFixed(2)),
-				])
+				//m("div",[
+				//	m("div", {class: style.label}, "Houd Eersel Schoon"),
+				//	m("div", {class: style.price}, "€"+(10.48).toFixed(2)),
+				//]),
+				//m("div",[
+				//	m("div", {class: style.label}, "Voor Anderen"),
+				//	m("div", {class: style.price}, "€"+(5.48).toFixed(2)),
+				//]),
+				//m("div",[
+				//	m("div", {class: style.label}, "Mijn Afval"),
+				//	m("div", {class: style.price}, "€"+(1.48).toFixed(2)),
+				//]),
+				//m("div",[
+				//	m("div", {class: style.label}, "Milieustraat"),
+				//	m("div", {class: style.price}, "€"+(20.48).toFixed(2)),
+				//])
 			]);
 		}
 	};

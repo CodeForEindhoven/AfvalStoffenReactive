@@ -26,7 +26,7 @@ var CalculatorModule = (function(){
 	return {
 		controller: function(options){
 			var amount = options.amount;
-			var unitprice = options.choices[0].price;
+			var unitprice = options.choices[options.defaultchoice].price;
 			var price = 0;
 
 			function updateprice(){
@@ -62,6 +62,7 @@ var CalculatorModule = (function(){
 				m.component(SelectContainer, {
 					onchange: ctrl.set_unitprice,
 					choices: options.choices,
+					defaultchoice: options.defaultchoice,
 					icon: options.icon
 				}),
 				m("div", {class: style.price}, "€"+ctrl.price().toFixed(2))

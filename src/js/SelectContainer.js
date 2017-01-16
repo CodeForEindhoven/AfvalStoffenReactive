@@ -3,7 +3,8 @@ var SelectContainer = (function(){
 		parent: s.cl({
 			"position": "relative",
 			"margin-top": "20px",
-			"float": "right"
+			"float": "right",
+			"user-select": "none",
 		}),
 		box: s.cl({
 			"width": "180px",
@@ -39,7 +40,7 @@ var SelectContainer = (function(){
 
 	return {
 		controller: function(options){
-			var value = options.choices[0];
+			var value = options.choices[options.defaultchoice];
 			var show = false;
 			return {
 				show: function(){return show;},
