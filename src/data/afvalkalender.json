@@ -1,4 +1,4 @@
-{
+[{
     "sector": "Eersel, kom",
     "schedule": [{
         "Weekday": "Dinsdag",
@@ -120,14 +120,11 @@
         "Weekday": "Dinsdag",
         "day": "21",
         "month": "november",
-        "type1": "GFT",
-        "type2": "PMD",
-        "type3": ""
+        "type": ["GFT", "PMD"]
     }, {
         "Weekday": "Dinsdag",
         "day": "5",
-        "month": "",
-        "type1": "december",
+        "month": "december",
         "type": ["REST", "GFT", "PMD"]
     }, {
         "Weekday": "Dinsdag",
@@ -135,4 +132,138 @@
         "month": "december",
         "type": ["GFT", "PMD"]
     }]
-}
+}, {
+    "sector": "Duizel, Knegsel, Steensel, Vessem, Wintelre en buitengebied hele gemeente",
+    "schedule": [{
+        "Weekday": "Dinsdag",
+        "day": "10",
+        "month": "januari",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "24",
+        "month": "januari",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "",
+        "month": "7",
+        "type1": "februari",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "21",
+        "month": "februari",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "7",
+        "month": "maart",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "21",
+        "month": "maart",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "4",
+        "month": "april",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "18",
+        "month": "april",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "2",
+        "month": "mei",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "16",
+        "month": "mei",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "30",
+        "month": "mei",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "13",
+        "month": "juni",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "27",
+        "month": "juni",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "11",
+        "month": "juli",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "25",
+        "month": "juli",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "8",
+        "month": "augustus",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "22",
+        "month": "augustus",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "5",
+        "month": "september",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "19",
+        "month": "september",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "3",
+        "month": "oktober",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "17",
+        "month": "oktober",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "31",
+        "month": "oktober",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "14",
+        "month": "november",
+        "type": ["GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "28",
+        "month": "november",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Dinsdag",
+        "day": "12",
+        "month": "december",
+        "type": ["REST", "GFT", "PMD"]
+    }, {
+        "Weekday": "Zaterdag",
+        "day": "30",
+        "month": "december",
+        "type": ["GFT", "PMD"]
+    }]
+}]
