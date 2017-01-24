@@ -1,20 +1,20 @@
 var CalculatorModule = (function(){
 	var style = {
-		parent: s.cl({
+		parent: b.cl({
 			"margin-bottom": "30px",
 			"padding-bottom": "30px",
 			"border-bottom": "1px solid #eeeeee",
 		}),
-		title: s.cl({
+		title: b.cl({
 			"font-size": "12pt",
 			"font-weight": "bold",
 		}),
-		subtitle: s.cl({
+		subtitle: b.cl({
 			"font-size": "10pt",
 			"margin-bottom": "10px",
 			"color": "#666666",
 		}),
-		price: s.cl({
+		price: b.cl({
 			"margin-top": "120px",
 			"font-size": "23pt",
 			"width": "100%",

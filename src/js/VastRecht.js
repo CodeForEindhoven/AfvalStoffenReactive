@@ -1,19 +1,19 @@
 var VastRecht = (function(){
 	var style = {
-		parent: s.cl({
+		parent: b.cl({
 			"margin-bottom": "30px",
 			"padding-bottom": "30px",
 			"border-bottom": "1px solid #eeeeee",
 		}),
-		title: s.cl({
+		title: b.cl({
 			"margin-bottom": "10px",
 			"border-bottom": "1px solid #aaaaaa"
 		}),
-		label: s.cl({
+		label: b.cl({
 			"float": "left",
 			"height": "20px"
 		}),
-		price: s.cl({
+		price: b.cl({
 			"margin-top": "10px",
 			"font-size": "23pt",
 			"width": "100%",

@@ -1,12 +1,12 @@
 var SelectContainer = (function(){
 	var style = {
-		parent: s.cl({
+		parent: b.cl({
 			"position": "relative",
 			"margin-top": "20px",
 			"float": "right",
 			"user-select": "none",
 		}),
-		box: s.cl({
+		box: b.cl({
 			"width": "180px",
 			"height": "30px",
 			"border": "1px solid black",
@@ -15,7 +15,7 @@ var SelectContainer = (function(){
 			"padding": "10px",
 			"cursor": "pointer"
 		}),
-		options: s.cl({
+		options: b.cl({
 			"width": "200px",
 			"border": "1px solid black",
 			"position": "absolute",
@@ -23,15 +23,15 @@ var SelectContainer = (function(){
 			"box-shadow": "0px 1px 5px #AAAAAA",
 			"z-index": "9999"
 		}),
-		option: "hover "+s.cl({
+		option: "hover "+b.cl({
 			"cursor": "pointer",
 			"padding": "10px"
 		}),
-		right: s.cl({
+		right: b.cl({
 			"float": "right",
 			"margin-right": "5px"
 		}),
-		icon: s.cl({
+		icon: b.cl({
 			"height": "30px",
 			"margin-right": "10px",
 			"vertical-align": "middle"

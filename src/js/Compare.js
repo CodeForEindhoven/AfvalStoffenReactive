@@ -1,6 +1,6 @@
 var Compare = (function(){
 	var style ={
-		main: s.cl({
+		main: b.cl({
 			"box-sizing": "border-box",
 			"padding": "20px",
 			"background-color": "#FFFFFF",
@@ -11,18 +11,18 @@ var Compare = (function(){
 			"margin-bottom": "30px",
 			"padding-bottom": "60px",
 		}),
-		leftshift: s.cl({
+		leftshift: b.cl({
 			"box-sizing": "border-box",
 			"padding-left": "100px",
 			"margin-top": "30px",
 
 		}),
-		label: s.cl({
+		label: b.cl({
 			"margin-top": "30px",
 			"float": "left",
 			"height": "20px"
 		}),
-		price: s.cl({
+		price: b.cl({
 			"font-size": "20pt",
 			"width": "100%",
 			"text-align": "right"
@@ -49,7 +49,7 @@ var Compare = (function(){
 						title: "Gemiddelde",
 						blocks: [
 							{color: "#4081c2", value:69.48*factor, label: "€69.48", title: "Vastrecht"},
-							{color: "#949594", value:24.55*factor, label: "€24.55", title: "Grijs"},
+							{color: "#949594", value:24.70*factor, label: "€24.70", title: "Grijs"},
 							{color: "#4b9b4a", value:9.00*factor, label: "€9.00", title: "GFT"},
 							//{color: "#FFC41D", value:0*factor, label: "€0", title: "PMD"}
 						]

@@ -1,10 +1,10 @@
 var SubBlockTitle = (function(){
 	var style = {
-		title: s.cl({
+		title: b.cl({
 			"font-size": "12pt",
 			"font-weight": "bold",
 		}),
-		subtitle: s.cl({
+		subtitle: b.cl({
 			"font-size": "10pt",
 			"margin-bottom": "10px",
 			"color": "#666666",

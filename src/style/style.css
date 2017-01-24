@@ -13,7 +13,11 @@ body {
 }
 
 .hover:hover{
-	background-color: #eeeeee;
+	background-color: #dddddd;
+}
+
+.menuitem:hover{
+	border-bottom: 4px solid white;
 }
 
 @media only screen and (max-width: 360px) {

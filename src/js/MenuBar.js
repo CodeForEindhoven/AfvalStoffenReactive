@@ -1,7 +1,7 @@
 var MenuBar = (function(){
 
 	var style = {
-		parent: s.cl({
+		parent: b.cl({
 			//shape
 			"box-sizing": "border-box",
 			"height": "70px",
@@ -16,13 +16,18 @@ var MenuBar = (function(){
 			"color": "#fff",
 			"box-shadow": "0px 1px 5px #AAAAAA",
 		}),
-		menuitem: s.cl({
+		menuitem: b.cl({
 			"float": "right",
 			"padding-left": "20px",
 			"padding-right": "20px",
 			"cursor": "pointer",
 			"line-height": "66px",
-			"border-bottom": "4px solid white"
+
+		}),
+		logo: b.cl({
+			"height": "25px",
+			"margin-right": "10px",
+			"vertical-align": "middle"
 		})
 	};
 
@@ -30,10 +35,10 @@ var MenuBar = (function(){
 	return {
 		view: function(){
 			return m("nav", {class: style.parent}, [
-				m("span","Afvalstoffen tool"),
-				m("span", {class: style.menuitem},"Overzicht"),
-				m("span", {class: style.menuitem},"Mijn Kosten"),
-
+				m("img",{class: style.logo, src: "/img/white_container2.svg"}),
+				m("span","Afvalstoffen Gemeente Eersel"),
+				m("span", {class: style.menuitem+"menuitem"},"Overzicht"),
+				m("span", {class: style.menuitem+"menuitem"},"Mijn Kosten"),
 			]);
 		}
 	};

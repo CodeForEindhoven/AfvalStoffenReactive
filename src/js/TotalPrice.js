@@ -1,18 +1,18 @@
 var TotalPrice = (function(){
 	var style = {
-		parent: s.cl({
+		parent: b.cl({
 			"margin-bottom": "60px"
 		}),
-		title: s.cl({
+		title: b.cl({
 			"margin-bottom": "10px",
 		}),
-		price: s.cl({
+		price: b.cl({
 			"margin-top": "10px",
 			"font-size": "23pt",
 			"width": "100%",
 			"text-align": "right"
 		}),
-		topline: s.cl({
+		topline: b.cl({
 			"width": "100%",
 			"height": "3px",
 			"border-bottom": "1px solid #aaaaaa",

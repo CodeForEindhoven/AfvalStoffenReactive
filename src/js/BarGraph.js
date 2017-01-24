@@ -1,19 +1,19 @@
 var BarGraph = (function(){
 	var style = {
-		main: s.cl({
+		main: b.cl({
 			"box-sizing": "border-box",
 			"user-select": "none",
 			"float": "left",
 			"width": "80px",
 			"margin-right": "20px;"
 		}),
-		block: s.cl({
+		block: b.cl({
 			"font-size": "10pt",
 			"color": "#FFFFFF",
 			"padding": "10px",
 			"position": "relative",
 		}),
-		title: s.cl({
+		title: b.cl({
 			"position": "absolute",
 			"text-align": "right",
 			"top": "0px",

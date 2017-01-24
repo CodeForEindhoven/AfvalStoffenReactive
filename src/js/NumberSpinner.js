@@ -1,11 +1,11 @@
 var NumberSpinner = (function(){
 	var style = {
-		parent: s.cl({
+		parent: b.cl({
 			"float": "left",
 			"position": "relative",
 			"user-select": "none",
 		}),
-		box: s.cl({
+		box: b.cl({
 			"width": "30px",
 			"height": "30px",
 			"border": "1px solid black",
@@ -14,7 +14,7 @@ var NumberSpinner = (function(){
 			"margin-bottom": "-1px",
 			"cursor": "pointer"
 		}),
-		times: s.cl({
+		times: b.cl({
 			"position":"absolute",
 			"top": "30px",
 			"left": "55px",
