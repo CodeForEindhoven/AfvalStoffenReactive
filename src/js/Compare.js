@@ -33,7 +33,7 @@ var Compare = (function(){
 		controller: function(values){
 			return {
 				totaldif: function(){
-					return (values.vastrecht()+values.grijs()+values.groen()-103.03);
+					return (values.vastrecht()+values.grijs()+values.groen()-(69.48+25.70+9.00));
 				}
 			};
 		},
@@ -49,7 +49,7 @@ var Compare = (function(){
 						title: "Gemiddelde",
 						blocks: [
 							{color: "#4081c2", value:69.48*factor, label: "€69.48", title: "Vastrecht"},
-							{color: "#949594", value:24.70*factor, label: "€24.70", title: "Grijs"},
+							{color: "#949594", value:25.70*factor, label: "€25.70", title: "Grijs"},
 							{color: "#4b9b4a", value:9.00*factor, label: "€9.00", title: "GFT"},
 							//{color: "#FFC41D", value:0*factor, label: "€0", title: "PMD"}
 						]
