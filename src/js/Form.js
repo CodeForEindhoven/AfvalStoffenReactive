@@ -1,14 +1,4 @@
 var Form = (function(){
-	var style = b.cl({
-		"box-sizing": "border-box",
-		"padding": "20px",
-		"background-color": "#FFFFFF",
-		"box-shadow": "1px 1px 5px #AAAAAA",
-		"float": "left",
-		"width": "100%",
-		"margin-bottom": "30px",
-	});
-
 	return {
 		controller: function(values){
 
@@ -24,7 +14,7 @@ var Form = (function(){
 			};
 		},
 		view: function(ctrl){
-			return m("div",{class: style},[
+			return m.component(Paper,[
 				m.component(CalculatorModule,
 					{
 						title: "Restafval",

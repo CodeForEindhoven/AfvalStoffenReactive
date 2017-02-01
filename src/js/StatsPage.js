@@ -6,7 +6,7 @@ var StatsPage = {
 		return m("div",[
 			m.component(MenuBar),
 			m("div",{class: "page"},[
-				"stats yall"
+				m.component(Paper,"stats")
 			])
 		]);
 	}
