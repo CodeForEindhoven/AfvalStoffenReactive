@@ -27,18 +27,59 @@ var StatsPage = {
 			]
 		};
 
+		var filters = [
+			{"type": "bool", "column": "rest", "label": "grijze containers", "value":true, "icon": "./img/black_container2.svg"},
+			{"type": "bool", "column": "gft", "label": "groene containers", "value":true, "icon": "./img/green_container2.svg"},
+			{"type": "bool", "column": "pmd", "label": "plastic", "value":true, "icon": "./img/yellow_bag2.svg"},
+			{"type": "range", "column": "year", "label": "jaar", "value":[2010, 2015]}
+		];
+
+		var callback = function(id, value){
+			filters[id].value = value;
+		};
+
+		var applyfilters = function(){
+			var output = [];
+			for(var i in data){
+				var source = {};
+				for(var j in data[i]){
+					source[j] = data[i][j];
+					for(var k in filters){
+
+						if(filters[k].column === j){
+							if(filters[k].type==="bool"){
+								if(filters[k].value === false){
+									console.log(filters[k].value);
+									source[j] = null;
+								}
+							}
+						}
+					}
+
+				}
+				output.push(source);
+			}
+
+			return output;
+		};
+
 		return {
 			data: data,
-			options: options
+			options: options,
+			filters: filters,
+			callback: callback,
+			applyfilters: applyfilters
 		};
 	},
 	view: function(ctrl){
 		return m("div",[
 			m.component(MenuBar),
 			m("div",{class: "page"},[
-				m.component(Paper,"filters"),
 				m.component(Paper,[
-					m.component(IconHistogram, ctrl.data, ctrl.options)
+					m.component(Filter, ctrl.filters, ctrl.callback)
+				]),
+				m.component(Paper,[
+					m.component(IconHistogram, ctrl.applyfilters(), ctrl.options)
 				])
 			])
 		]);

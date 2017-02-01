@@ -1,5 +1,3 @@
-var Visualizations = {}; //map of visualizaitions
-
 var VisualizationBlock = {
 	controller: function(){
 		return {
@@ -37,34 +35,5 @@ var VisualizationBlock = {
 			m.component(Filter, input.filters),
 			m.component(Visualizations[input.visualization.type], ctrl.applyfilters(input.filters, input.source.data), input.visualization.options)
 		]);
-	}
-};
-
-var Filter = {
-	controller: function(filters){
-		return {
-			onchange: function(id){
-				return function(e){
-					var a = Model.vis();
-					a.filters[id].value = e.target.checked;
-					Model.vis(a);
-				};
-			}
-		};
-	},
-	view: function(ctrl, filters){
-		return m("div", {class: "options"}, filters.map(function(filter, id){
-			if(filter.type === "bool"){
-				return m("div", {class: "switch"}, [
-					m("input", {
-						"type": "checkbox",
-						"checked": filter.value,
-						"onchange": ctrl.onchange(id)
-					}),
-					m("img", {src: filter.icon}),
-					m("span", filter.label)
-				]);
-			}
-		}));
 	}
 };
