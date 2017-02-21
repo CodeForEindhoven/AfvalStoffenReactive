@@ -23,7 +23,6 @@ var MenuBar = (function(){
 				"background-color": "#267f79",
 				"padding-left": "20px",
 				"padding-right": "20px",
-
 			},
 			"monitor": {
 				"float": "right",

@@ -19,10 +19,29 @@ var IconHistogram = (function(){
 			"margin-bottom": "15px",
 			"border-bottom": "1px solid #d8d8d8",
 			"padding-bottom": "15px",
+			"position": "relative"
 		}),
 		label: b.cl({
 			"font-weight": "bold",
-		})
+			"display": "inline-block"
+		}),
+		price: b.cl({
+			"margin-top": "5px",
+			"float": "right",
+			"display": "inline-block",
+			"font-size": "8pt",
+		}),
+	};
+
+	var PriceBar = {
+		controller: function(){
+			return {
+
+			};
+		},
+		view: function(ctrl, data){
+			return m("div",data);
+		}
 	};
 
 	var Iconstack = {
@@ -30,7 +49,7 @@ var IconHistogram = (function(){
 
 		},
 		view: function(ctrl, number, icon){
-			if(number){
+			if(number.amount){
 				return m("div", {class: s.iconstack},(function(total){
 					var containers = [];
 					while(total > 1){
@@ -39,12 +58,14 @@ var IconHistogram = (function(){
 					}
 					containers.push(m("img", {
 						src: icon,
-						style: "-webkit-clip-path: inset("+((1-total)*15)+"px 0px 0px 0px ); ",
+						style: "-webkit-clip-path: inset("+((1-total)*15)+"px 0px 0px 0px ); " + "clip-path: inset("+((1-total)*15)+"px 0px 0px 0px ); ",
 						class: s.icon
 					}));
-					containers.unshift(m("div", {class: s.number}, (number*1000).toFixed(0)+" kg"));
+					containers.unshift(m("div", {class: s.number}, (number.amount*1000).toFixed(0)+" kg"));
+					console.log(number);
+					if(number.price){containers.push(m("div", {class: s.price}, ["€"+(number.price).toFixed(2)]));}
 					return containers;
-				})(number/10));
+				})(number.amount/10));
 			}
 			return m("");
 		}
@@ -55,14 +76,26 @@ var IconHistogram = (function(){
 
 		},
 		view: function(ctrl, data, options){
+
 			return m("div", {class: "visualization iconhistogram"}, [
 				data.map(function(block){
 					return m("div", {class: s.block}, [
-						m("div", {class: s.label}, block[options.label]),
+						m("div",[
+							m("div", {class: s.label}, block[options.label]),
+							block.vastrecht?m("div", {class: s.price}, "€"+(block.vastrecht).toFixed(2)): m(""),
+						]),
 						options.display.map(function(stack){
 							return m.component(Iconstack, block[stack.column], stack.icon);
 						}),
-
+						//m("div", {class: s.prices},(function(){
+						//	if(block.price){
+						//		return [
+						//			m("div", block.price.rest),
+						//			m("div", block.price.gft),
+						//			m("div", block.price.vast),
+						//		];
+						//	}
+						//})())
 					]);
 				})
 			]);

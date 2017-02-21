@@ -1,21 +1,21 @@
 var StatsPage = {
 	controller: function(){
 		var data = [
-			{"year":"2015", "rest":53.1, "gft":78.7,"pmd":22.8},
-			{"year":"2014", "rest":54.3, "gft":72.6,"pmd":null},
-			{"year":"2013", "rest":98.9, "gft":43.3,"pmd":null},
-			{"year":"2012", "rest":99.8, "gft":46.4,"pmd":null},
-			{"year":"2011", "rest":95.2, "gft":50.4,"pmd":null},
-			{"year":"2010", "rest":91.6, "gft":48.7,"pmd":null},
-			{"year":"2009", "rest":96.6, "gft":49.9,"pmd":null},
-			{"year":"2008", "rest":104, "gft":51.1,"pmd":null},
-			{"year":"2007", "rest":107.1, "gft":52,"pmd":null},
-			{"year":"2006", "rest":102.5, "gft":50.1,"pmd":null},
-			{"year":"2005", "rest":123.2, "gft":50.3,"pmd":null},
-			{"year":"2004", "rest":125.1, "gft":53.5,"pmd":null},
-			{"year":"2003", "rest":124.3, "gft":51.5,"pmd":null},
-			{"year":"2002", "rest":124, "gft":58.2,"pmd":null},
-			{"year":"2001", "rest":115.3, "gft":63.7,"pmd":null}
+			{"year":"2015", "vastrecht": 69.12, "rest": {"amount": 53.1, "price": 8.00},  "gft":{"amount":78.7, "price": 1.47} ,"pmd": {"amount":22.8}},
+			{"year":"2014", "vastrecht": 41.65, "rest": {"amount": 54.3, "price": 8.00},  "gft":{"amount":72.6, "price": 1.00} ,"pmd": {"amount":null}},
+			{"year":"2013", "vastrecht": 51.40, "rest": {"amount": 98.9, "price": 4.47},  "gft":{"amount":43.3, "price": 3.83} ,"pmd": {"amount":null}},
+			{"year":"2012", "vastrecht": 50.70, "rest": {"amount": 99.8, "price": 4.47},  "gft":{"amount":46.4, "price": 3.80} ,"pmd": {"amount":null}},
+			{"year":"2011", "rest": {"amount": 95.2},  "gft":{"amount":50.4} ,"pmd": {"amount":null}},
+			{"year":"2010", "rest": {"amount": 91.6},  "gft":{"amount":48.7} ,"pmd": {"amount":null}},
+			{"year":"2009", "rest": {"amount": 96.6},  "gft":{"amount":49.9} ,"pmd": {"amount":null}},
+			{"year":"2008", "rest": {"amount": 104.0}, "gft":{"amount":51.1} ,"pmd": {"amount":null}},
+			{"year":"2007", "rest": {"amount": 107.1}, "gft":{"amount":52.0} ,"pmd": {"amount":null}},
+			{"year":"2006", "rest": {"amount": 102.5}, "gft":{"amount":50.1} ,"pmd": {"amount":null}},
+			{"year":"2005", "rest": {"amount": 123.2}, "gft":{"amount":50.3} ,"pmd": {"amount":null}},
+			{"year":"2004", "rest": {"amount": 125.1}, "gft":{"amount":53.5} ,"pmd": {"amount":null}},
+			{"year":"2003", "rest": {"amount": 124.3}, "gft":{"amount":51.5} ,"pmd": {"amount":null}},
+			{"year":"2002", "rest": {"amount": 124.0}, "gft":{"amount":58.2} ,"pmd": {"amount":null}},
+			{"year":"2001", "rest": {"amount": 115.3}, "gft":{"amount":63.7} ,"pmd": {"amount":null}}
 		];
 
 		var options = {
