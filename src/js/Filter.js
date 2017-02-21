@@ -29,11 +29,11 @@ var Filter = (function(){
 			return m("div", {class: "options"}, filters.map(function(filter, id){
 				if(filter.type === "bool"){
 					return m("div", {class: s.switchline}, [
-						m("input", {
-							"type": "checkbox",
-							"checked": filter.value,
-							"onchange": ctrl.onchange(id)
-						}),
+						//m("input", {
+						//	"type": "checkbox",
+						//	"checked": filter.value,
+						//	"onchange": ctrl.onchange(id)
+						//}),
 						m("img", {src: filter.icon, class: s.icon}),
 						m("span", filter.label)
 					]);

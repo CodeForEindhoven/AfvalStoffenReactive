@@ -28,9 +28,9 @@ var StatsPage = {
 		};
 
 		var filters = [
-			{"type": "bool", "column": "rest", "label": "grijze containers", "value":true, "icon": "./img/black_container2.svg"},
-			{"type": "bool", "column": "gft", "label": "groene containers", "value":true, "icon": "./img/green_container2.svg"},
-			{"type": "bool", "column": "pmd", "label": "plastic", "value":true, "icon": "./img/yellow_bag2.svg"},
+			{"type": "bool", "column": "rest", "label": "totaal opgehaald restafval in kg", "value":true, "icon": "./img/black_container2.svg"},
+			{"type": "bool", "column": "gft", "label": "totaal opgehaald gft in kg", "value":true, "icon": "./img/green_container2.svg"},
+			{"type": "bool", "column": "pmd", "label": "totaal opgehaald plastic in kg", "value":true, "icon": "./img/yellow_bag2.svg"},
 			{"type": "range", "column": "year", "label": "jaar", "value":[2010, 2015]}
 		];
 

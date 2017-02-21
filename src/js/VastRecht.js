@@ -32,7 +32,7 @@ var VastRecht = (function(){
 			return m("div",{class: style.parent},[
 				m.component(SubBlockTitle, {
 					title: "Vastrecht",
-					subtitle: "Vast bedrag over de hele pot"
+					subtitle: "Uit het vastrecht worden overige afvalstromen betaald. (Milieustraat, glascontainers, huis aan huis inzameling papier/PMD). Ook vallen onder het vastrecht de kosten van de inzet voor medewerkers t.b.v. afval, advieskosten en voorlichting."
 				}),
 				m("div",[
 					//m("div", {class: style.label}, "Houd Eersel Schoon"),
